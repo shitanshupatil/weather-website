@@ -1,5 +1,3 @@
-console.log('Client Side JavaScript File!')
-
 //Client side Javascript. Not accessible in Node.js. Runs in client side JS. 
 //THEN function below is a part of a bigger API called PROMISES
 // fetch('http://localhost:3000/weather?address=!').then((response)=> {
