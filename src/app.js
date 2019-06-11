@@ -3,6 +3,7 @@ const getCordinates = require('./geocode.js')
 const forecast = require('./forecast.js')
 const path = require('path') //CORE node module for directory and path manipulations.You need not install it. Its already present
 const hbs = require('hbs')
+const port = process.env.PORT || 3000 //object to access environment variables
 
 //template engine -- handle bars for dynamic documents
 // Express module is actually a function which is used to call an Express application
@@ -117,8 +118,8 @@ app.use(express.static(publicDirectoryPath)) //express' function USE is used to 
     })
  })
 
-app.listen(3000, ()=> {
-    console.log('Server is up on port 3000') //this wont be seenon browser
+app.listen(port, ()=> {
+    console.log('Server is up on port ' + port) //this wont be seenon browser
 }) // port 3000 is the development port. So you can use this.
 //use CTRL C to stop the server
 

@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit',(event)=>{
 event.preventDefault() //Prevents the default functioning of the browser ie reloading it
 console.log(search.value)
 console.log('testing!')
-var url = 'http://localhost:3000/weather?address=' + search.value
+var url = '/weather?address=' + search.value //relative url
 fetch(url).then((response) => {
     response.json().then((data)=>{
         if (data.error)
